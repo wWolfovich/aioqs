@@ -5,8 +5,8 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setup(
-    name="aioqs-wWolf",
-    version="0.5",
+    name="aioqs",
+    version="0.5.1",
     author="Oleg Marin",
     author_email="wWolfovich@gmail.com",
     description="Async queue and scheduler with limit for number of simultaneous coroutines",
