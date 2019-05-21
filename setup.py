@@ -1,10 +1,10 @@
 
-import setuptools
+from setuptools import setup, find_packages
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
-setuptools.setup(
+setup(
     name="aioqs-wWolf",
     version="0.5",
     author="Oleg Marin",
@@ -13,10 +13,12 @@ setuptools.setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/wWolfovich/aioqs",
-    packages=setuptools.find_packages(),
+    packages=find_packages(),
+    py_modules=['aioqs'],
+    keywords="AIO async queue schedule",
     classifiers=[
         "Programming Language :: Python :: 3",
-        "License :: OSI Approved :: GNU AFFERO GENERAL PUBLIC LICENSE v.3",
+        "License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)",
         "Operating System :: OS Independent",
     ],
 )
