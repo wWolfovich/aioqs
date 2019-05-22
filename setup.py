@@ -6,7 +6,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name="aioqs",
-    version="0.5.1",
+    version="0.5.5",
     author="Oleg Marin",
     author_email="wWolfovich@gmail.com",
     description="Async queue and scheduler with limit for number of simultaneous coroutines",
@@ -15,6 +15,9 @@ setup(
     url="https://github.com/wWolfovich/aioqs",
     packages=find_packages(),
     py_modules=['aioqs'],
+    extras_require={
+        "async_timeout":["async_timeout"],
+        },
     keywords="AIO async queue schedule",
     classifiers=[
         "Programming Language :: Python :: 3",
