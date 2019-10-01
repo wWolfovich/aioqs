@@ -1,12 +1,14 @@
 
 from setuptools import setup, find_packages
+import aioqs
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
+
 setup(
     name="aioqs",
-    version="0.5.5",
+    version=aioqs.__version__,
     author="Oleg Marin",
     author_email="wWolfovich@gmail.com",
     description="Async queue and scheduler with limit for number of simultaneous coroutines",

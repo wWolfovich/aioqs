@@ -3,6 +3,7 @@ Created on 21 мая 2019 г.
 
 @author: wwolf <wWolfovich@gmail.com>
 '''
+__version__ = "0.5.6"
 
 import asyncio
 try:
@@ -37,7 +38,7 @@ class AIOQS(object):
     async def __lim_add(self, coro):
         """Wrapper method around self.__add used when @param limit is set"""
         await self._semaphore.acquire()
-        self.__add(coro)
+        await self.__add(coro)
 
 
     async def __add(self, coro):
