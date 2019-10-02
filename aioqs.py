@@ -3,7 +3,7 @@ Created on 21 мая 2019 г.
 
 @author: wwolf <wWolfovich@gmail.com>
 '''
-__version__ = "0.5.6"
+__version__ = "0.6"
 
 import asyncio
 try:
@@ -26,7 +26,7 @@ class AIOQS(object):
     def __init__(self, work, limit=0, loop=None):
         self._tasks = work
         self._loop = loop if loop else asyncio.get_event_loop()
-        self._semaphore = asyncio.Semaphore(limit) if limit >= 0 else None
+        self._semaphore = asyncio.Semaphore(limit) if limit > 0 else None
         self._queue = asyncio.queues.Queue(loop=self._loop)
         self._pool = set()
         self._ff = None

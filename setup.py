@@ -20,6 +20,7 @@ setup(
     extras_require={
         "async_timeout":["async_timeout"],
         },
+    python_requires='>=3.5.2',
     keywords="AIO async queue schedule",
     classifiers=[
         "Programming Language :: Python :: 3",
